@@ -1,0 +1,3 @@
+* Haskell Sandbox
+
+Haskell experiments at varying degrees of bakedness that don't warrant their own repos.
