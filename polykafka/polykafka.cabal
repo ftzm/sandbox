@@ -1,0 +1,45 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e003490bd9546f3ca57bb34644eec1b200c6921098f3f33ddebaa5f700640f01
+
+name:           polykafka
+version:        0.1.0.0
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+library
+  other-modules:
+      Paths_polykafka
+  hs-source-dirs:
+      src
+  default-extensions: DataKinds FlexibleContexts GADTs LambdaCase PolyKinds RankNTypes ScopedTypeVariables TypeApplications TypeOperators TypeFamilies
+  ghc-options: -O2 -flate-specialise -fspecialise-aggressively
+  build-depends:
+      base
+    , polysemy
+  default-language: Haskell2010
+
+executable pk
+  main-is: Main.hs
+  other-modules:
+      Paths_polykafka
+  hs-source-dirs:
+      app
+  default-extensions: DataKinds FlexibleContexts GADTs LambdaCase PolyKinds RankNTypes ScopedTypeVariables TypeApplications TypeOperators TypeFamilies
+  ghc-options: -O2 -flate-specialise -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base
+    , polykafka
+    , polysemy
+  default-language: Haskell2010

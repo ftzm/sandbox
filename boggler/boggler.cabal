@@ -1,0 +1,66 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3cc3a81eddaa78ef3085bea0052aee18bbead9d01084bb35c9bf20d902de88b3
+
+name:           boggler
+version:        0.1.0.0
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+build-type:     Simple
+
+library
+  exposed-modules:
+      Bench
+      Boggler
+      NFTrie
+  other-modules:
+      Paths_boggler
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , bytestring-trie
+    , containers
+    , criterion
+    , deepseq
+    , deepseq-generics
+    , generic-deriving
+    , mtl
+    , random
+    , recursion-schemes
+    , recursion-schemes-ext
+    , time
+    , timeit
+  default-language: Haskell2010
+
+executable boggler
+  main-is: Main.hs
+  other-modules:
+      Paths_boggler
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , boggler
+    , bytestring
+    , bytestring-trie
+    , containers
+    , criterion
+    , deepseq
+    , deepseq-generics
+    , generic-deriving
+    , mtl
+    , random
+    , recursion-schemes
+    , recursion-schemes-ext
+    , time
+    , timeit
+  default-language: Haskell2010
